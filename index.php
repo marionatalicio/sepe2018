@@ -1,3 +1,10 @@
+<pre>
+    <?php
+        require_once 'app/controllers/controlador.php';
+        var_dump($data['olho']);
+    ?>
+</pre>
+
 <html>
 <head>
     <title>Calculator 3000</title>
@@ -17,10 +24,12 @@
 <div class="ui container segment">
     <form class="ui form">
         <div class="field">
-            <label>Country</label>
+            <label>Característica</label>
             <select class="ui search dropdown">
-                <option value="">Select Country</option>
-                <option value="a">a</option>
+                <option value="">Selecione a Característica</option>
+                <?php foreach ($data as $key => $value): ?>
+                    <option value="<?= $key ?>"><?= $value['nome'] ?></option>
+                <?php endforeach; ?>
             </select>
         </div>
         <div class="ui two column grid">
@@ -32,7 +41,12 @@
                     </div>
                 </h2>
                 <div class="field">
-                    <input type="text">
+                    <select class="ui search dropdown">
+                        <option value="">Selecione o Fenótipo</option>
+                        <option value="Aa">Verde</option>
+                        <option value="aa">Azul</option>
+                        <option value="AA">Castanho</option>
+                    </select>
                 </div>
             </div>
             <div class="column">
@@ -42,6 +56,14 @@
                         Mãe
                     </div>
                 </h2>
+                <div class="field">
+                    <select class="ui search dropdown">
+                        <option value="">Selecione o Fenótipo</option>
+                        <option value="Aa">Verde</option>
+                        <option value="aa">Azul</option>
+                        <option value="AA">Castanho</option>
+                    </select>
+                </div>
             </div>
         </div>
     </form>

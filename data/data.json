@@ -1,0 +1,19 @@
+{
+  "olho": {
+    "nome": "Cor do Olho",
+    "caracteristicas":[
+        {
+          "feno": "Castanho",
+          "geno": "AA"
+        },
+        {
+          "feno": "Verde",
+          "geno": "Aa"
+        },
+        {
+          "feno": "Azul",
+          "geno": "aa"
+        }
+      ]
+  }
+}
