@@ -4,16 +4,140 @@
     "caracteristicas":[
         {
           "feno": "Castanho",
-          "geno": "AA"
+          "geno": ["AA"]
         },
         {
           "feno": "Verde",
-          "geno": "Aa"
+          "geno": ["Aa"]
         },
         {
           "feno": "Azul",
-          "geno": "aa"
+          "geno": ["aa"]
         }
       ]
-  }
+  },
+  "cabelo_tipo": {
+    "nome": "Tipo do cabelo",
+    "caracteristicas":[
+      {
+        "feno": "Crespo",
+        "geno": ["AA"]
+      },
+      {
+        "feno": "Ondulado",
+        "geno": ["Aa"]
+      },
+      {
+        "feno": "Liso",
+        "geno": ["aa"]
+      }
+    ]
+  },
+  "cabelo_cor": {
+    "nome": "Cor do Cabelo",
+    "caracteristicas":[
+      {
+        "feno": "Preto",
+        "geno": ["AABB"]
+      },
+      {
+        "feno": "Castanho Escuro",
+        "geno": ["AABb", "AaBB"]
+      },
+      {
+        "feno": "Castanho Claro",
+        "geno": ["AAbb", "aaBB", "AaBb"]
+      },
+      {
+        "feno": "Ruivo",
+        "geno": ["Aabb", "aaBb"]
+      },
+      {
+        "feno": "Loiro",
+        "geno": ["aabb"]
+      }
+    ]
+  },
+  "daltonismo": {
+    "nome": "Daltonismo",
+    "caracteristicas":[
+      {
+        "feno": "Normal",
+        "geno": ["xDxD", "xdy"]
+      },
+      {
+        "feno": "Normal Portadora",
+        "geno": ["xDxd"]
+      },
+      {
+        "feno": "Daltonico",
+        "geno": ["xdxd", "xdy"]
+      }
+    ]
+  },
+  "cova_quixo": {
+    "nome": "Cova No Queixo",
+    "caracteristicas":[
+      {
+        "feno": "Sem Cova",
+        "geno": ["AA", "Aa"]
+      },
+            {
+        "feno": "Com Cova",
+        "geno": ["aa"]
+      }
+    ]
+  },
+  "covinha": {
+    "nome": "Cova Na Bochecha (Covinha)",
+    "caracteristicas":[
+      {
+        "feno": "Com Covinha",
+        "geno": ["AA", "Aa"]
+      },
+      {
+        "feno": "Sem Covinha",
+        "geno": ["aa"]
+      }
+    ]
+  },
+  "bico_viuva": {
+  "nome": "Bico de Viúva",
+  "caracteristicas":[
+    {
+      "feno": "Sem o Bico de Viúva",
+      "geno": ["AA", "Aa"]
+    },
+    {
+      "feno": "Com o Bico de Viúva",
+      "geno": ["aa"]
+    }
+  ]
+},
+  "dedinho": {
+    "nome": "Mindinho Curvado",
+    "caracteristicas":[
+      {
+        "feno": "Com o Mindinho Curvado",
+        "geno": ["AA", "Aa"]
+      },
+      {
+        "feno": "Sem o Mindinho Curvado",
+        "geno": ["aa"]
+      }
+    ]
+  },
+  "orelha": {
+    "nome": "Lóbulo da Orelha",
+    "caracteristicas":[
+      {
+        "feno": "Lóbulos Soltos",
+        "geno": ["AA", "Aa"]
+      },
+      {
+        "feno": "Lóbulos Grudado",
+        "geno": ["aa"]
+      }
+    ]
+  },
 }
