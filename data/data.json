@@ -80,7 +80,7 @@
     "caracteristicas":[
       {
         "feno": "Sem Cova",
-        "geno": ["A?"]
+        "geno": ["AA", "Aa"]
       },
             {
         "feno": "Com Cova",
@@ -93,7 +93,7 @@
     "caracteristicas":[
       {
         "feno": "Com Covinha",
-        "geno": ["A?"]
+        "geno": ["AA", "Aa"]
       },
       {
         "feno": "Sem Covinha",
@@ -106,7 +106,7 @@
   "caracteristicas":[
     {
       "feno": "Sem o Bico de Viúva",
-      "geno": ["A?"]
+      "geno": ["AA", "Aa"]
     },
     {
       "feno": "Com o Bico de Viúva",
@@ -119,7 +119,7 @@
     "caracteristicas":[
       {
         "feno": "Com o Mindinho Curvado",
-        "geno": ["A?"]
+        "geno": ["AA", "Aa"]
       },
       {
         "feno": "Sem o Mindinho Curvado",
@@ -132,12 +132,12 @@
     "caracteristicas":[
       {
         "feno": "Lóbulos Soltos",
-        "geno": ["A?"]
+        "geno": ["AA", "Aa"]
       },
       {
         "feno": "Lóbulos Grudado",
         "geno": ["aa"]
       }
     ]
-  }
+  },
 }
