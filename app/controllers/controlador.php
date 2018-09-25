@@ -29,4 +29,7 @@ switch ($acao){
         echo $vals;
         break;
 
+    case  'teste':
+
+
 }
