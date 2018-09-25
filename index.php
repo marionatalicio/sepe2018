@@ -1,18 +1,26 @@
 <pre>
     <?php
-        require_once 'app/controllers/controlador.php';
-        var_dump($data['olho']);
+        $caminho = 'data/data.json';
+        require_once 'app/model.php';
     ?>
 </pre>
 
 <html>
 <head>
     <title>Calculator 3000</title>
+    <base href="http://localhost/sepe2018/">
+
     <link rel="stylesheet" type="text/css" href="assets/vendor/semantic/semantic.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/semantic/components/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/semantic/components/form.css">
+
     <script src="assets/vendor/jquery/jquery.js"></script>
+
     <script src="assets/vendor/semantic/semantic.js"></script>
+    <script type="text/javascript" src="assets/vendor/semantic/components/form.js"></script>
+
     <script src="assets/front/index.js"></script>
+    <script src="app/js/controller.js"></script>
 </head>
 
 <div class="ui container" style="margin: 20px 0">
@@ -25,7 +33,7 @@
     <form class="ui form">
         <div class="field">
             <label>Característica</label>
-            <select class="ui search dropdown">
+            <select id="caracteristica" class="ui search dropdown">
                 <option value="">Selecione a Característica</option>
                 <?php foreach ($data as $key => $value): ?>
                     <option value="<?= $key ?>"><?= $value['nome'] ?></option>
@@ -41,11 +49,8 @@
                     </div>
                 </h2>
                 <div class="field">
-                    <select class="ui search dropdown">
+                    <select name="feno_pai" class="ui fluid search dropdown fenotipo">
                         <option value="">Selecione o Fenótipo</option>
-                        <option value="Aa">Verde</option>
-                        <option value="aa">Azul</option>
-                        <option value="AA">Castanho</option>
                     </select>
                 </div>
             </div>
@@ -57,16 +62,12 @@
                     </div>
                 </h2>
                 <div class="field">
-                    <select class="ui search dropdown">
+                    <select name="feno_mae" class="ui fluid search dropdown fenotipo">
                         <option value="">Selecione o Fenótipo</option>
-                        <option value="Aa">Verde</option>
-                        <option value="aa">Azul</option>
-                        <option value="AA">Castanho</option>
                     </select>
                 </div>
             </div>
         </div>
     </form>
 </div>
-
 </html>
