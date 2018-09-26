@@ -41,33 +41,43 @@
             </select>
         </div>
         <div class="ui two column grid">
-            <div class="column">
-                <h2 class="ui header">
-                    <i class="mars icon"></i>
-                    <div class="content">
-                        Pai
+            <div class="row">
+                <div class="column">
+                    <h2 class="ui header">
+                        <i class="mars icon"></i>
+                        <div class="content">
+                            Pai
+                        </div>
+                    </h2>
+                    <div class="field">
+                        <select id="feno_pai" class="ui fluid search dropdown fenotipo">
+                            <option value="">Selecione o Fenótipo</option>
+                        </select>
                     </div>
-                </h2>
-                <div class="field">
-                    <select name="feno_pai" class="ui fluid search dropdown fenotipo">
-                        <option value="">Selecione o Fenótipo</option>
-                    </select>
+                </div>
+                <div class="column">
+                    <h2 class="ui header">
+                        <i class="venus icon"></i>
+                        <div class="content">
+                            Mãe
+                        </div>
+                    </h2>
+                    <div class="field">
+                        <select id="feno_mae" class="ui fluid search dropdown fenotipo">
+                            <option value="">Selecione o Fenótipo</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <h2 class="ui header">
-                    <i class="venus icon"></i>
-                    <div class="content">
-                        Mãe
+            <div class="row">
+                <div class="column">
+                    <div class="ui button clearing" id="enviar">
+                        Enviar
                     </div>
-                </h2>
-                <div class="field">
-                    <select name="feno_mae" class="ui fluid search dropdown fenotipo">
-                        <option value="">Selecione o Fenótipo</option>
-                    </select>
                 </div>
             </div>
         </div>
+
     </form>
 </div>
 </html>

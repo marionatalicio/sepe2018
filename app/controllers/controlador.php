@@ -8,6 +8,7 @@
 
 $caminho = '../../data/data.json';
 require_once '../model.php';
+require_once 'Calculadora.php';
 
 if (isset($_POST['acao'])){
     $acao = $_POST['acao'];
@@ -29,7 +30,13 @@ switch ($acao){
         echo $vals;
         break;
 
-    case  'teste':
+    case  'enviar':
+        $mae = $_POST['vals']['mae'];
+        $pai = $_POST['vals']['pai'];
+
+        $calculadora = new Calculadora($_POST['vals']['carac'], $pai, $mae);
+        $calculadora->retorna();
+        break;
 
 
 }
