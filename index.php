@@ -16,6 +16,8 @@
 
     <script src="assets/vendor/jquery/jquery.js"></script>
 
+    <script src="assets/vendor/charJS/Chart.js"></script>
+
     <script src="assets/vendor/semantic/semantic.js"></script>
     <script type="text/javascript" src="assets/vendor/semantic/components/form.js"></script>
 
@@ -71,13 +73,19 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <div class="ui button clearing" id="enviar">
+                    <div class="ui clear button" id="enviar">
                         Enviar
                     </div>
                 </div>
             </div>
         </div>
+        <div class="ui centered grid">
+            <div class="six wide tablet eight wide computer column">
+                <div id="chart" style="width: 500px ">
 
+                </div>
+            </div>
+        </div>
     </form>
 </div>
 </html>

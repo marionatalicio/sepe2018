@@ -47,8 +47,14 @@ class Calculadora
     private function abre($str){
         $str = str_split($str);
         $n_str = [];
-        foreach ($str as $s){
+        foreach ($str as $key => $s){
             if ($s == '?'){
+                if ($key == 0){
+                    $n_str[] = 'A';
+                    $n_str[] = 'a';
+                } else {
+                    $n_str[] = $n_str[0];
+                }
                 $n_str[] = 'A';
                 $n_str[] = 'a';
             } else {
@@ -59,7 +65,24 @@ class Calculadora
         return $n_str;
     }
 
-    private function calcula_simples(){
+    private function abre_feno($str){
+        $str = str_split($str);
+        $n_str = [];
+        foreach ($str as $key => $s){
+            if ($s == '?'){
+                $n_str[] = $n_str[0] . 'a';
+                $n_str[0] = $n_str[0] . 'A';
+            } elseif ($key < 1) {
+                $n_str[] = $s;
+            } else{
+                $n_str[0] .= $s;
+            }
+        }
+
+        return $n_str;
+    }
+
+    public function calcula_simples(){
         $mae = $this->abre($this->mae[0]);
         $pai = $this->abre($this->pai[0]);
 
@@ -101,12 +124,45 @@ class Calculadora
     public function retorna(){
         if (count($this->pai) == 1 and count($this->mae) == 1){
             if (strlen($this->pai[0]) == 2 and strlen($this->mae[0]) == 2 ){
-                var_dump($this->calcula_simples());
+                $calc = $this->calcula_simples();
+
+                $list = [];
+
+                foreach ($this->caracteristica as $carac){
+                    $fenotipo  = $carac['feno'];
+                    $genotipos = $carac['geno'];
+                    $i = 0;
+                    foreach ($genotipos as $geno){
+                        foreach ($this->abre_feno($geno) as $g){
+                            foreach ($calc as $key => $val){
+                                if ($key == $g){
+                                    $i += $val;
+                                }
+                            }
+                        }
+                    }
+                    $list[$fenotipo] = round($i*100,1);
+                }
+
+                echo json_encode($list);
             }
         }
     }
 }
 
-/*$a = new Calculadora([], 'A?', 'Aa');
+/*$array = [
+      [
+          "feno" => "Sem Cova",
+        "geno" => ["A?"]
+      ],
+        [
+                "feno" => "Com Cova",
+        'geno' => ["aa"]
+      ]
+    ];
 
-var_dump($a->calcula_simples());*/
+$a = new Calculadora($array, ['AA'], ['aa']);
+
+//var_dump($a->calcula_simples());
+echo "\n";
+$a->retorna();*/

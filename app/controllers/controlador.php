@@ -34,9 +34,9 @@ switch ($acao){
         $mae = $_POST['vals']['mae'];
         $pai = $_POST['vals']['pai'];
 
-        $calculadora = new Calculadora($_POST['vals']['carac'], $pai, $mae);
+        $calculadora = new Calculadora($data[$_POST['vals']['carac']]['caracteristicas'], $pai, $mae);
+        header("Conten-type: application/json");
         $calculadora->retorna();
         break;
-
 
 }
